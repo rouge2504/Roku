@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "966772288619",
+    "project_id": "roku-remote-android-9d62f",
+    "storage_bucket": "roku-remote-android-9d62f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966772288619:android:bbce09e2b7a9a6b206952e",
+        "android_client_info": {
+          "package_name": "com.sensustech.rokuremote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966772288619-ttr39jieg23lgcro5315rmu5da2jneb5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7X6RSjMblQ5OSPCkywWLzAeXcvRu1l1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966772288619-ttr39jieg23lgcro5315rmu5da2jneb5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

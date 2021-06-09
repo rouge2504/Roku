@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/remote"
+        android:icon="@drawable/footer_b_remote"
+        android:title="Remote" />
+
+    <item
+        android:id="@+id/interaction"
+        android:icon="@drawable/footer_b_interaction"
+        android:title="Interaction" />
+
+    <item
+        android:id="@+id/channels"
+        android:icon="@drawable/footer_b_channels"
+        android:title="Channels" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/footer_b_settings"
+        android:title="Settings" />
+
+</menu>
