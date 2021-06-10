@@ -51,7 +51,7 @@ public class AdsManager implements BillingProcessor.IBillingHandler {
 
     public void initIntersitial() {
         mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId("ca-app-pub-4975991316875268/9331253788");
+        mInterstitialAd.setAdUnitId("ca-app-pub-1543284146754967/3874922716");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         mInterstitialAd.setAdListener(new AdListener() {
             @Override

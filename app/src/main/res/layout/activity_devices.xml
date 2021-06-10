@@ -55,7 +55,7 @@
         android:fontFamily="@font/sourcesanspro_semibold"
         android:gravity="center"
         android:text="Make sure that your Android device and Roku are connected to the same Wi-Fi network."
-        android:textColor="#974acf"
+        android:textColor="#00BCD4"
         android:textSize="16sp" />
 
 </RelativeLayout>

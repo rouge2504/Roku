@@ -74,7 +74,7 @@ public class SettingsFragment extends Fragment {
                     restorePurchases();
                 }
                 else if(titles[position].equals("Contact Us")) {
-                    openURL("mailto:support@sensustech.com");
+                    openURL("mailto:app.development206@gmail.com");
                 }
                 else if(titles[position].equals("Share App")) {
                     shareAction();
