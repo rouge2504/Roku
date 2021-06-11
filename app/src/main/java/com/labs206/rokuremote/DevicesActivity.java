@@ -1,12 +1,10 @@
-package com.sensustech.rokuremote;
+package com.labs206.rokuremote;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
@@ -15,10 +13,11 @@ import com.connectsdk.device.ConnectableDevice;
 import com.connectsdk.discovery.DiscoveryManager;
 import com.connectsdk.discovery.DiscoveryManagerListener;
 import com.connectsdk.service.command.ServiceCommandError;
-import com.sensustech.rokuremote.Adapters.DevicesAdapter;
-import com.sensustech.rokuremote.Models.DeviceModel;
-import com.sensustech.rokuremote.Utils.AppPreferences;
-import com.sensustech.rokuremote.Utils.ItemClickSupport;
+import com.labs206.rokuremote.Adapters.DevicesAdapter;
+import com.labs206.rokuremote.Models.DeviceModel;
+import com.labs206.rokuremote.Utils.AppPreferences;
+import com.labs206.rokuremote.Utils.ItemClickSupport;
+import com.labs206.rokuremote.R;
 
 import java.util.ArrayList;
 

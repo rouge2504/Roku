@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote.Utils;
+package com.labs206.rokuremote.Utils;
 
 import android.os.AsyncTask;
 

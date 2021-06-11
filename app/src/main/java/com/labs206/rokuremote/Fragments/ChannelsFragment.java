@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote.Fragments;
+package com.labs206.rokuremote.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,19 +16,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sensustech.rokuremote.Adapters.ChannelsAdapter;
-import com.sensustech.rokuremote.Models.ChannelModel;
-import com.sensustech.rokuremote.PremActivity;
-import com.sensustech.rokuremote.R;
-import com.sensustech.rokuremote.Utils.AdsManager;
-import com.sensustech.rokuremote.Utils.AppPreferences;
-import com.sensustech.rokuremote.Utils.ItemClickSupport;
-import com.sensustech.rokuremote.Utils.RecyclerItemClickListener;
-import com.sensustech.rokuremote.Utils.RokuControl;
+import com.labs206.rokuremote.Adapters.ChannelsAdapter;
+import com.labs206.rokuremote.Models.ChannelModel;
+import com.labs206.rokuremote.PremActivity;
+import com.labs206.rokuremote.R;
+import com.labs206.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.Utils.AppPreferences;
+import com.labs206.rokuremote.Utils.ItemClickSupport;
+import com.labs206.rokuremote.Utils.RokuControl;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -40,18 +35,16 @@ import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.channels.Channel;
 import java.util.ArrayList;
 
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
-import static com.sensustech.rokuremote.Utils.ScreenChecker.screenSize;
+import static com.labs206.rokuremote.Utils.ScreenChecker.screenSize;
 
 public class ChannelsFragment extends Fragment {
 

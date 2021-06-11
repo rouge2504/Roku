@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.sensustech.rokuremote",
+  "applicationId": "com.labs206.rokuremote",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "properties": [],
-      "versionCode": 17,
-      "versionName": "17",
+      "versionCode": 18,
+      "versionName": "18",
       "enabled": true,
       "outputFile": "app-release.apk"
     }

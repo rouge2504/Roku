@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote;
+package com.labs206.rokuremote;
 
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -25,11 +25,12 @@ import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.formats.UnifiedNativeAdView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.sensustech.rokuremote.Fragments.ChannelsFragment;
-import com.sensustech.rokuremote.Fragments.InteractionFragment;
-import com.sensustech.rokuremote.Fragments.RemoteFragment;
-import com.sensustech.rokuremote.Fragments.SettingsFragment;
-import com.sensustech.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.Fragments.ChannelsFragment;
+import com.labs206.rokuremote.Fragments.InteractionFragment;
+import com.labs206.rokuremote.Fragments.RemoteFragment;
+import com.labs206.rokuremote.Fragments.SettingsFragment;
+import com.labs206.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.R;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

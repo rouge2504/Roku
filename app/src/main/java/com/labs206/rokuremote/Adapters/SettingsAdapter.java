@@ -1,22 +1,16 @@
-package com.sensustech.rokuremote.Adapters;
+package com.labs206.rokuremote.Adapters;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TabHost;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sensustech.rokuremote.PremActivity;
-import com.sensustech.rokuremote.R;
+import com.labs206.rokuremote.R;
 
 public class SettingsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
 

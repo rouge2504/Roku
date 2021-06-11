@@ -1,22 +1,17 @@
-package com.sensustech.rokuremote.Adapters;
+package com.labs206.rokuremote.Adapters;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sensustech.rokuremote.Models.ChannelModel;
-import com.sensustech.rokuremote.Models.DeviceModel;
-import com.sensustech.rokuremote.R;
+import com.labs206.rokuremote.Models.DeviceModel;
+import com.labs206.rokuremote.R;
 
-import org.w3c.dom.Text;
-
-import java.nio.channels.Channel;
 import java.util.ArrayList;
 
 public class DevicesAdapter extends RecyclerView.Adapter<DevicesAdapter.DevicesViewHolder> {

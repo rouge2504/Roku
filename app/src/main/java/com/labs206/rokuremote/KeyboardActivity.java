@@ -1,18 +1,18 @@
-package com.sensustech.rokuremote;
+package com.labs206.rokuremote;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.sensustech.rokuremote.Utils.AppPreferences;
-import com.sensustech.rokuremote.Utils.RokuControl;
+import com.labs206.rokuremote.Utils.AppPreferences;
+import com.labs206.rokuremote.Utils.RokuControl;
+import com.labs206.rokuremote.R;
 
 public class KeyboardActivity extends AppCompatActivity {
 

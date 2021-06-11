@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote.Models;
+package com.labs206.rokuremote.Models;
 
 public class ChannelModel {
     public String appId;

@@ -1,10 +1,10 @@
-package com.sensustech.rokuremote.Utils;
+package com.labs206.rokuremote.Utils;
 
 import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sensustech.rokuremote.R;
+import com.labs206.rokuremote.R;
 
 public class ItemClickSupport {
     private final RecyclerView mRecyclerView;

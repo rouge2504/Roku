@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote.Adapters;
+package com.labs206.rokuremote.Adapters;
 
 import android.app.Activity;
 import android.os.Build;
@@ -11,12 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.sensustech.rokuremote.Models.ChannelModel;
-import com.sensustech.rokuremote.R;
-import com.sensustech.rokuremote.Utils.AppPreferences;
+import com.labs206.rokuremote.Models.ChannelModel;
+import com.labs206.rokuremote.R;
+import com.labs206.rokuremote.Utils.AppPreferences;
 import com.squareup.picasso.Picasso;
 
-import java.nio.channels.Channel;
 import java.util.ArrayList;
 
 public class ChannelsAdapter extends RecyclerView.Adapter<ChannelsAdapter.ChannelViewHolder> {

@@ -1,9 +1,8 @@
-package com.sensustech.rokuremote.Utils;
+package com.labs206.rokuremote.Utils;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;

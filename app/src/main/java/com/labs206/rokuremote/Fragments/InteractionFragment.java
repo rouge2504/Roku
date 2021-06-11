@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote.Fragments;
+package com.labs206.rokuremote.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +12,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.sensustech.rokuremote.KeyboardActivity;
-import com.sensustech.rokuremote.PremActivity;
-import com.sensustech.rokuremote.R;
-import com.sensustech.rokuremote.Utils.AdsManager;
-import com.sensustech.rokuremote.Utils.AppPreferences;
-import com.sensustech.rokuremote.Utils.OnSwipeTouchListener;
-import com.sensustech.rokuremote.Utils.RokuControl;
+import com.labs206.rokuremote.KeyboardActivity;
+import com.labs206.rokuremote.PremActivity;
+import com.labs206.rokuremote.R;
+import com.labs206.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.Utils.AppPreferences;
+import com.labs206.rokuremote.Utils.OnSwipeTouchListener;
+import com.labs206.rokuremote.Utils.RokuControl;
 
 public class InteractionFragment extends Fragment {
 

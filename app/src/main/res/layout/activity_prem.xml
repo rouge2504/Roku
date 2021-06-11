@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#232323"
-    tools:context=".PremActivity">
+    tools:context="com.labs206.rokuremote.com.sensustech.rokuremote.PremActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -159,18 +159,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/rel_image"
-            android:layout_alignParentBottom="true">
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="97dp"
+            android:layout_marginBottom="-97dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_pay"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:layout_centerInParent="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 app:cardBackgroundColor="#65A931"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="4dp"
-                android:layout_centerInParent="true">
+                app:cardElevation="4dp">
 
                 <Button
                     android:id="@+id/btn_pay"
@@ -181,6 +183,7 @@
                     android:text="FULL VERSION $4.99"
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -214,6 +217,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
         </RelativeLayout>
 

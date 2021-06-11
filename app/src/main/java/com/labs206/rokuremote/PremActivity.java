@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote;
+package com.labs206.rokuremote;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -17,7 +17,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.anjlab.android.iab.v3.SkuDetails;
-import com.sensustech.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.R;
 
 import java.util.ArrayList;
 

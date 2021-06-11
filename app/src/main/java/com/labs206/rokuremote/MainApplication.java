@@ -1,9 +1,7 @@
-package com.sensustech.rokuremote;
+package com.labs206.rokuremote;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
 
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
@@ -14,8 +12,8 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.my.tracker.MyTracker;
 import com.my.tracker.MyTrackerParams;
-import com.sensustech.rokuremote.Utils.AdsManager;
-import com.sensustech.rokuremote.Utils.AppPreferences;
+import com.labs206.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.Utils.AppPreferences;
 
 import java.util.Arrays;
 import java.util.List;

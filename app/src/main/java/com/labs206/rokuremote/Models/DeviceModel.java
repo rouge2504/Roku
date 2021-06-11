@@ -1,4 +1,4 @@
-package com.sensustech.rokuremote.Models;
+package com.labs206.rokuremote.Models;
 
 public class DeviceModel {
     public String name;

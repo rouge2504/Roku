@@ -1,38 +1,23 @@
-package com.sensustech.rokuremote.Fragments;
+package com.labs206.rokuremote.Fragments;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Display;
-import android.view.KeyCharacterMap;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewConfiguration;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
-import com.sensustech.rokuremote.PremActivity;
-import com.sensustech.rokuremote.R;
-import com.sensustech.rokuremote.Utils.AdsManager;
-import com.sensustech.rokuremote.Utils.AppPreferences;
-import com.sensustech.rokuremote.Utils.RokuControl;
-
-import static com.sensustech.rokuremote.Utils.ScreenChecker.screenSize;
+import com.labs206.rokuremote.PremActivity;
+import com.labs206.rokuremote.R;
+import com.labs206.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.Utils.AppPreferences;
+import com.labs206.rokuremote.Utils.RokuControl;
 
 public class RemoteFragment extends Fragment {
 

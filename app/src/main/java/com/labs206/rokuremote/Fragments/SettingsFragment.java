@@ -1,36 +1,25 @@
-package com.sensustech.rokuremote.Fragments;
+package com.labs206.rokuremote.Fragments;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sensustech.rokuremote.Adapters.ChannelsAdapter;
-import com.sensustech.rokuremote.Adapters.SettingsAdapter;
-import com.sensustech.rokuremote.DevicesActivity;
-import com.sensustech.rokuremote.Models.ChannelModel;
-import com.sensustech.rokuremote.Models.DeviceModel;
-import com.sensustech.rokuremote.PremActivity;
-import com.sensustech.rokuremote.R;
-import com.sensustech.rokuremote.Utils.AdsManager;
-import com.sensustech.rokuremote.Utils.AppPreferences;
-import com.sensustech.rokuremote.Utils.ItemClickSupport;
-import com.sensustech.rokuremote.Utils.RecyclerItemClickListener;
-
-import java.util.ArrayList;
+import com.labs206.rokuremote.Adapters.SettingsAdapter;
+import com.labs206.rokuremote.DevicesActivity;
+import com.labs206.rokuremote.PremActivity;
+import com.labs206.rokuremote.R;
+import com.labs206.rokuremote.Utils.AdsManager;
+import com.labs206.rokuremote.Utils.ItemClickSupport;
 
 public class SettingsFragment extends Fragment {
 
