@@ -3,6 +3,7 @@ package com.labs206.rokuremote.Utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
@@ -10,6 +11,12 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.my.tracker.MyTracker;
+
+import java.text.DateFormat;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class AdsManager implements BillingProcessor.IBillingHandler {
 
@@ -94,9 +101,46 @@ public class AdsManager implements BillingProcessor.IBillingHandler {
         if (bp == null) {
             init(ctx);
         }
-        if (AppPreferences.getInstance(ctx).getBoolean("isLifetimePremium") || (bp != null && bp.isPurchased("com.sensustech.rokuremote.lifetime")))
+        if (CheckDate(ctx)){
+            return false;
+        }
+        if (AppPreferences.getInstance(ctx).getBoolean("isLifetimePremium") || (bp != null && bp.isPurchased("unlock_all")))
             return true;
+
+        if (AppPreferences.getInstance(ctx).getBoolean("isYearly") || (bp != null && bp.isPurchased("yearly_subscription")))
+            return true;
+
+        if (AppPreferences.getInstance(ctx).getBoolean("isWeek") || (bp != null && bp.isPurchased( "four_weeks")))
+            return true;
+
         return false;
+    }
+
+    public boolean CheckDate(Context ctx){
+        if (TextUtils.isEmpty(AppPreferences.getInstance(ctx).getString("YearEnabled"))
+                || TextUtils.isEmpty(AppPreferences.getInstance(ctx).getString("WeekEnabled"))){
+
+            return false;
+        }
+        Date expiredDate = stringToDate(AppPreferences.getInstance(ctx).getString("YearEnabled"), "yyyy-mm-dd hh:mm:ss");
+        if (new Date().after(expiredDate))
+            return false;
+
+        expiredDate = stringToDate(AppPreferences.getInstance(ctx).getString("WeekEnabled"), "yyyy-mm-dd hh:mm:ss");
+        if (new Date().after(expiredDate))
+            return false;
+
+        return true;
+    }
+
+    private Date stringToDate(String aDate,String aFormat) {
+
+        if(aDate==null) return null;
+        ParsePosition pos = new ParsePosition(0);
+        SimpleDateFormat simpledateformat = new SimpleDateFormat(aFormat);
+        Date stringDate = simpledateformat.parse(aDate, pos);
+        return stringDate;
+
     }
 
     public BillingProcessor getBP() {
@@ -108,6 +152,8 @@ public class AdsManager implements BillingProcessor.IBillingHandler {
         if (bp != null) {
             bp.purchase(activity, purchaseId);
         }
+
+
     }
 
     public void checkPremium() {
@@ -131,8 +177,33 @@ public class AdsManager implements BillingProcessor.IBillingHandler {
     @Override
     public void onProductPurchased(String productId, TransactionDetails details) {
         trackPremiumCompleted();
-        if (productId.equals("com.sensustech.rokuremote.lifetime")) {
+        if (productId.equals("unlock_all")) {
             AppPreferences.getInstance(context).saveData("isLifetimePremium", true);
+        }
+        else if (productId.equals("yearly_subscription")) {
+            AppPreferences.getInstance(context).saveData("isYearly", true);
+            Date date = new Date();
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+            calendar.add(Calendar.YEAR, 1);
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+            date = calendar.getTime();
+            String strDate = dateFormat.format(date);
+            AppPreferences.getInstance(context).saveData("YearEnabled", strDate);
+            System.out.println(calendar.getTime());
+        }
+
+        else if (productId.equals("four_weeks")) {
+            AppPreferences.getInstance(context).saveData("isWeek", true);
+            Date date = new Date();
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+            calendar.add(Calendar.WEEK_OF_YEAR, 4);
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+            date = calendar.getTime();
+            String strDate = dateFormat.format(date);
+            AppPreferences.getInstance(context).saveData("WeekEnabled", strDate);
+            System.out.println(calendar.getTime());
         }
         checkPremium();
         closePremium();

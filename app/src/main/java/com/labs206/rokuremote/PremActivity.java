@@ -26,6 +26,8 @@ public class PremActivity extends AppCompatActivity {
 
     private ImageButton btn_close;
     private Button btn_pay;
+    private Button btn_yearly;
+    private Button btn_four_weeks;
     private TextView tv_privacy;
     private CardView card_pay;
 
@@ -42,6 +44,8 @@ public class PremActivity extends AppCompatActivity {
             }
         });
         btn_pay = findViewById(R.id.btn_pay);
+        btn_yearly = findViewById(R.id.btn_yearly);
+        btn_four_weeks = findViewById(R.id.btn_four_weeks);
         tv_privacy = findViewById(R.id.tv_privacy);
         card_pay = findViewById(R.id.card_pay);
         Animation anim = new ScaleAnimation(
@@ -60,9 +64,23 @@ public class PremActivity extends AppCompatActivity {
         btn_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdsManager.getInstance().makePurchase(PremActivity.this, "com.sensustech.rokuremote.lifetime");
+                AdsManager.getInstance().makePurchase(PremActivity.this, "unlock_all");
             }
         });
+        btn_yearly.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AdsManager.getInstance().makePurchase(PremActivity.this, "yearly_subscription");
+            }
+        });
+
+        btn_four_weeks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AdsManager.getInstance().makePurchase(PremActivity.this, "four_weeks");
+            }
+        });
+
     }
 
     public void readPrices() {
@@ -77,9 +95,11 @@ public class PremActivity extends AppCompatActivity {
     private class readPricesAsync extends AsyncTask<Void, Void, ArrayList<SkuDetails>> {
         @Override
         protected ArrayList<SkuDetails> doInBackground(Void... voids) {
-            SkuDetails skuLifetime = AdsManager.getInstance().getBP().getPurchaseListingDetails("com.sensustech.rokuremote.lifetime");
+            //SkuDetails skuLifetime = AdsManager.getInstance().getBP().getPurchaseListingDetails("unlock_all");
             ArrayList<SkuDetails> purchaseListingDetails = new ArrayList<SkuDetails>();
-            purchaseListingDetails.add(skuLifetime);
+            purchaseListingDetails.add(AdsManager.getInstance().getBP().getPurchaseListingDetails("unlock_all"));
+            purchaseListingDetails.add(AdsManager.getInstance().getBP().getPurchaseListingDetails("yearly_subscription"));
+            purchaseListingDetails.add(AdsManager.getInstance().getBP().getPurchaseListingDetails("four_weeks"));
             return purchaseListingDetails;
         }
 
@@ -87,6 +107,8 @@ public class PremActivity extends AppCompatActivity {
         protected void onPostExecute(ArrayList<SkuDetails> list) {
             if (list.get(0) != null) {
                 btn_pay.setText("FULL VERSION " + list.get(0).priceText);
+                btn_yearly.setText("Yearly VERSION " + list.get(1).priceText);
+                btn_four_weeks.setText("4 weeks VERSION " + list.get(2).priceText);
             }
         }
     }
@@ -112,6 +134,7 @@ public class PremActivity extends AppCompatActivity {
     }
 
     public void closeOffer() {
+        System.out.println(AdsManager.getInstance().isPremium(this));
         if (!AdsManager.getInstance().isPremium(this)) {
             AdsManager.getInstance().showAds();
         }

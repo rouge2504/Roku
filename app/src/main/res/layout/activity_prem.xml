@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#232323"
-    tools:context="com.labs206.rokuremote.com.sensustech.rokuremote.PremActivity">
+    tools:context="com.labs206.rokuremote.PremActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -160,19 +160,21 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/rel_image"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="97dp"
-            android:layout_marginBottom="-97dp">
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="-80dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_pay"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginEnd="30dp"
                 app:cardBackgroundColor="#65A931"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="4dp">
+
 
                 <Button
                     android:id="@+id/btn_pay"
@@ -183,7 +185,6 @@
                     android:text="FULL VERSION $4.99"
                     android:textColor="@android:color/white"
                     android:textSize="26sp" />
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -218,6 +219,115 @@
 
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_yearly"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:cardBackgroundColor="#65A931"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
+
+
+                <Button
+                    android:id="@+id/btn_yearly"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#65A931"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:text="Yearly VERSION $4.99"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.1"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:gravity="center|bottom"
+                        android:text="ONE TIME PAYMENT"
+                        android:textColor="@android:color/white"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sourcesanspro_semibolditalic"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:text="Only $19.99 one time payment"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_four_weeks"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:cardBackgroundColor="#65A931"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
+
+
+                <Button
+                    android:id="@+id/btn_four_weeks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#65A931"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:text="4 weeks"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="20dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.1"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:gravity="center|bottom"
+                        android:text="ONE TIME PAYMENT"
+                        android:textColor="@android:color/white"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sourcesanspro_semibolditalic"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:text="Only $19.99 one time payment"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
 
